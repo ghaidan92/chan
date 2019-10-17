@@ -209,17 +209,17 @@
     width: 66%;
     font-size: 35px;
     margin-top: -4rem;
-    margin-left: 20rem;
+    margin-left: 12rem;
 }
 
 .ornamet {
     width: 30%;
-    margin-left: 40rem;
+    margin-left: 26rem;
 }
 
 .ornamet2 {
     width: 30%;
-    margin-left: 41rem;
+    margin-left: 27rem;
     margin-top: -5rem;
 }
 
@@ -257,7 +257,7 @@
     padding: 5px 10px;
     width: 66.66667%;
     justify-content: stretch;
-    margin-left: 18rem;
+    margin-left: 12rem;
 }
 
 .footer-grid>div {
@@ -271,8 +271,8 @@
 
 .special1 {
     grid-area: special1;
-    max-height: 30%;
-    margin-top: 30%;
+    max-height: 60%;
+    margin-top: 10%;
     transform: translateX(25%);
     z-index: 1;
     color: white;
@@ -282,6 +282,12 @@
     grid-area: special2;
     height: 100vh;
     transform: translateX(-15%);
+}
+
+#exception {
+    width: 60%;
+    font-size: 20px;
+    margin-left: 15rem;
 }
 
 .special2>img {
@@ -299,7 +305,7 @@
 .spe-pic>p {
     background-color: orange;
     text-align: start;
-    padding: 90px;
+    padding: 30px;
 }
 
 .spe-pic>p>a {
@@ -344,8 +350,8 @@
 
 .dinner-pic {
     position: absolute;
-    bottom: 18rem;
-    right: 20rem;
+    bottom: 10rem;
+    right: 10rem;
 }
 
 .pic2 {
@@ -357,8 +363,8 @@
 
 .lunch-pic {
     position: absolute;
-    margin-top: -25rem;
-    right: 25rem;
+    margin-top: -17rem;
+    right: 15rem;
 }
 
 .pic3 {
@@ -370,8 +376,9 @@
 
 .dessert-pic {
     position: absolute;
-    margin-top: -15rem;
-    left: 23rem;
+    margin-top: -10rem;
+    left: 17rem;
+    font-size: 60%;
 }
 
 .pic4 {
@@ -383,8 +390,9 @@
 
 .drinks-pic {
     position: absolute;
-    margin-top: -15rem;
-    left: 53rem;
+    margin-top: -10rem;
+    left: 36rem;
+    font-size: 60%;
 }
 
 .pic5 {
@@ -399,8 +407,8 @@
     grid-template-areas: 'pic1 pic1 pic1 pic1 pic2 pic2' 'pic3 pic3 pic4 pic4 pic5 pic5';
     grid-gap: 40px;
     padding: 5px 10px;
-    width: 80rem;
-    margin-left: 17rem;
+    width: 50rem;
+    margin-left: 13rem;
 }
 
 .pics>p {
