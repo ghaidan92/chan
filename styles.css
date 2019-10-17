@@ -1,0 +1,551 @@
+.checkbox {
+    display: none;
+}
+
+.nav-btn {
+    background-image: url('./images/FaviconLogo.jpg');
+    background-size: cover;
+    height: 7rem;
+    width: 7rem;
+    position: fixed;
+    top: 1rem;
+    left: 2.5rem;
+    border-radius: 50%;
+    z-index: 2000;
+    box-shadow: 0 1rem 3rem rgba(black, .1);
+    text-align: center;
+    cursor: pointer;
+}
+
+.nav-icon {
+    position: relative;
+    margin-top: 3.5rem;
+}
+
+.nav-icon,
+.nav-icon::before,
+.nav-icon::after {
+    width: 3rem;
+    height: 2px;
+    background-color: darkgrey;
+    display: inline-block;
+}
+
+.nav-icon::before,
+.nav-icon::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    transition: all .2s;
+}
+
+.nav-icon::before {
+    top: -.8rem;
+}
+
+.nav-icon::after {
+    top: .8rem;
+}
+
+.nav-bkgd {
+    height: 6rem;
+    width: 6rem;
+    border-radius: 50%;
+    position: fixed;
+    top: 1rem;
+    left: 3rem;
+    background-color: bisque;
+    opacity: .9;
+    z-index: 1000;
+    transition: transform .8s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+.nav {
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1500;
+    visibility: hidden;
+    opacity: 0;
+    width: 0;
+    transition: all .8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.nav-list {
+    margin-top: 10rem;
+    list-style: none;
+    text-align: center;
+    width: 100%;
+}
+
+.nav-item {
+    margin: 1rem;
+}
+
+.nav-link,
+.nav-link:link,
+.nav-link:visited {
+    display: inline-block;
+    font-size: 3rem;
+    font-weight: 300;
+    padding: 1rem 2rem;
+    color: red;
+    text-decoration: none;
+    text-transform: uppercase;
+    /* for the link animations */
+    /* background-image: linear-gradient(120deg, transparent 0%, transparent 50%, white 50%); */
+    background-size: 220%;
+    transition: all .4s;
+}
+
+.nav-link:hover,
+.nav-link:active {
+    background-position: 100%;
+    color: bisque;
+    transform: translateX(1rem);
+}
+
+
+/* Nav Functionality */
+
+.checkbox:checked~.nav-bkgd {
+    transform: scale(80);
+}
+
+.checkbox:checked~.nav {
+    visibility: visible;
+    opacity: 1;
+    width: 100%;
+}
+
+.nav-btn:hover .nav-icon::before {
+    top: -1rem;
+}
+
+.nav-btn:hover .nav-icon::after {
+    top: 1rem;
+}
+
+.checkbox:checked+.nav-btn .nav-icon {
+    background-color: transparent;
+}
+
+.checkbox:checked+.nav-btn .nav-icon::before {
+    top: 0;
+    transform: rotate(135deg);
+}
+
+.checkbox:checked+.nav-btn .nav-icon::after {
+    top: 0;
+    transform: rotate(-135deg);
+}
+
+.header {
+    grid-area: header;
+    /* height: 100vh; */
+}
+
+#logo {
+    width: 60%;
+    margin: 5rem 0;
+}
+
+.header-logo {
+    width: 50%;
+}
+
+#soul-food-1 {
+    position: absolute;
+    top: 5%;
+    width: 40%;
+    animation-name: soul1;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+}
+
+#soul-food-2 {
+    position: absolute;
+    top: 5%;
+    left: 68%;
+    width: 32%;
+    animation-name: soul2;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+}
+
+#soul-food-3 {
+    position: absolute;
+    top: 40%;
+    left: 70%;
+    width: 30%;
+    animation-name: soul3;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+}
+
+#pic3 {
+    position: absolute;
+    top: 39%;
+    width: 25%;
+    transform: rotate(30deg);
+    opacity: .8;
+    animation-name: pic3;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+}
+
+.welcome {
+    grid-area: welcome;
+    padding: 20px;
+    align-items: stretch;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.welcome p {
+    width: 66%;
+    font-size: 35px;
+    margin-top: -4rem;
+    margin-left: 20rem;
+}
+
+.ornamet {
+    width: 30%;
+    margin-left: 40rem;
+}
+
+.ornamet2 {
+    width: 30%;
+    margin-left: 41rem;
+    margin-top: -5rem;
+}
+
+.footer {
+    grid-area: footer;
+    font-size: 15px !important;
+}
+
+.footer1 {
+    grid-area: footer1;
+}
+
+.footer2 {
+    grid-area: footer2;
+}
+
+.footer3 {
+    grid-area: footer3;
+}
+
+.footer4 {
+    grid-area: footer4;
+}
+
+.border {
+    border-bottom: 1px solid black;
+    width: 110%;
+}
+
+.footer-grid {
+    background-color: wheat;
+    display: grid;
+    grid-template-areas: 'footer1 footer1 footer2 footer2 footer3 footer3 footer4 footer4';
+    grid-gap: 5px;
+    padding: 5px 10px;
+    width: 66.66667%;
+    justify-content: stretch;
+    margin-left: 18rem;
+}
+
+.footer-grid>div {
+    text-align: start;
+    padding: 2px 0;
+}
+
+.specials {
+    grid-area: specials;
+}
+
+.special1 {
+    grid-area: special1;
+    max-height: 30%;
+    margin-top: 30%;
+    transform: translateX(25%);
+    z-index: 1;
+    color: white;
+}
+
+.special2 {
+    grid-area: special2;
+    height: 100vh;
+    transform: translateX(-15%);
+}
+
+.special2>img {
+    width: 100%;
+    height: 100%;
+}
+
+.spe-pic {
+    display: grid;
+    grid-template-areas: 'special1 special2 special2 special2 special2 special2';
+    grid-gap: 5px;
+    padding: 5px 10px;
+}
+
+.spe-pic>p {
+    background-color: orange;
+    text-align: start;
+    padding: 90px;
+}
+
+.spe-pic>p>a {
+    color: red;
+}
+
+.pics>div>img {
+    width: 100%;
+    height: 100%;
+    opacity: .7;
+}
+
+.pics>div>img:hover {
+    opacity: 1;
+}
+
+.menuheader {
+    grid-area: menuheader;
+}
+
+.menu {
+    grid-area: menu;
+}
+
+#theMenu {
+    font-size: 2rem;
+}
+
+
+/* #theMenu::before {
+    content: url('./images/bellpepper.png');
+    width: 30%;
+} */
+
+.pic1 {
+    grid-area: pic1;
+    position: relative;
+    text-align: center;
+    color: rgb(4, 197, 165);
+    font-size: 5rem;
+}
+
+.dinner-pic {
+    position: absolute;
+    bottom: 18rem;
+    right: 20rem;
+}
+
+.pic2 {
+    grid-area: pic2;
+    text-align: center;
+    color: rgb(4, 197, 165);
+    font-size: 5rem;
+}
+
+.lunch-pic {
+    position: absolute;
+    margin-top: -25rem;
+    right: 25rem;
+}
+
+.pic3 {
+    grid-area: pic3;
+    text-align: center;
+    color: rgb(4, 197, 165);
+    font-size: 5rem;
+}
+
+.dessert-pic {
+    position: absolute;
+    margin-top: -15rem;
+    left: 23rem;
+}
+
+.pic4 {
+    grid-area: pic4;
+    text-align: center;
+    color: rgb(4, 197, 165);
+    font-size: 5rem;
+}
+
+.drinks-pic {
+    position: absolute;
+    margin-top: -15rem;
+    left: 53rem;
+}
+
+.pic5 {
+    grid-area: pic5;
+    text-align: center;
+    color: rgb(4, 197, 165);
+    font-size: 5rem;
+}
+
+.pics {
+    display: grid;
+    grid-template-areas: 'pic1 pic1 pic1 pic1 pic2 pic2' 'pic3 pic3 pic4 pic4 pic5 pic5';
+    grid-gap: 40px;
+    padding: 5px 10px;
+    width: 80rem;
+    margin-left: 17rem;
+}
+
+.pics>p {
+    background-color: red;
+    text-align: center;
+    padding: 2px 0;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-areas: 'header header header header header header' 'welcome welcome welcome welcome welcome welcome' 'specials specials specials specials specials specials' 'menuheader menuheader menuheader menuheader menuheader menuheader' 'menu menu menu menu menu menu' 'footer footer footer footer footer footer';
+    grid-gap: 10px;
+    background-color: bisque;
+    padding: 10px;
+}
+
+.grid-container>div {
+    /* background-color: rgba(255, 255, 255, 0.8); */
+    text-align: center;
+    padding: 20px;
+    font-size: 30px;
+}
+
+@media only screen and (max-width: 1200px) {
+    .header-logo {
+        width: 40%;
+    }
+    #soul-food-3 {
+        top: 30%;
+        left: 60%;
+    }
+    #soul-food-2 {
+        top: 5%;
+        left: 60%;
+    }
+    .ornamet {
+        margin-left: 25rem;
+    }
+    .ornamet2 {
+        margin-left: 25rem;
+    }
+    .welcome p {
+        margin: -2rem 0 3rem 10rem;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .header-logo {
+        width: 50%;
+    }
+    #soul-food-1 {
+        top: 5%;
+        width: 40%;
+    }
+    #soul-food-3 {
+        top: 20%;
+        left: 65%;
+    }
+    #soul-food-2 {
+        left: 65%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .header-logo {
+        width: 100%;
+    }
+    #logo-heading {
+        animation-duration: 2s;
+        animation-timing-function: ease-in-out;
+    }
+    #soul-food-1 {
+        display: none;
+    }
+    #soul-food-2 {
+        display: none;
+    }
+    #soul-food-3 {
+        display: none;
+    }
+}
+
+@keyframes soul1 {
+    0% {
+        opacity: 0;
+        transform: translateX(-10rem);
+    }
+    /* 60% {
+       transform: rotate(20deg)
+   } */
+    80% {
+        transform: translateX(1rem);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes soul2 {
+    0% {
+        opacity: 0;
+        transform: translateY(-10rem);
+    }
+    /* 60% {
+       transform: rotate(20deg)
+   } */
+    80% {
+        transform: translateY(1rem);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes soul3 {
+    0% {
+        opacity: 0;
+        transform: translateX(-10rem);
+    }
+    /* 60% {
+       transform: rotate(20deg)
+   } */
+    80% {
+        transform: translateX(1rem);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes pic3 {
+    0% {
+        opacity: 0;
+        transform: translateX(-10rem);
+    }
+    60% {
+        transform: rotate(20deg)
+    }
+    80% {
+        transform: translateX(1rem);
+    }
+    100% {
+        /* transform: translate(0); */
+    }
+}
